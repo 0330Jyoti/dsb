@@ -1,0 +1,301 @@
+/******************************************************************
+ 						METABOX AND FIELDS
+******************************************************************/
+
+#dsb-settings .inside,
+#dsb-seo-page-config .inside {
+	margin: 0;
+	padding: 0;
+}
+
+#dsb-seo-page-config .inside {
+	margin-top: -1px;
+}
+
+#dsb-settings .dsb-field-container:first-of-type {
+	border-top: none;
+}
+
+.dsb-field-container {
+	padding: 15px 12px;
+	box-sizing: border-box;
+}
+
+.dsb-meta-box .dsb-field-container {
+	border-top: 1px solid #eeeeee;
+}
+
+.dsb-meta-box .dsb-meta-box-panel {
+    padding: 15px 12px;
+}
+
+.dsb-meta-box .dsb-meta-box-panel .dsb-row {
+	border: 1px solid #c3c4c7;
+}
+
+.dsb-slug-placeholder,
+.dsb-locations {
+	border-left: 1px solid #eeeeee;
+}
+
+.dsb-url-structure label {
+	vertical-align: initial;
+}
+
+.dsb-meta-box p,
+.dsb-meta-box input,
+.dsb-meta-box textarea {
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+#dsb-seo-page-config .dsb-meta-box input:not([type="checkbox"]):not([type="radio"]),
+#dsb-seo-page-config .dsb-meta-box textarea {
+	width: 100%;
+}
+
+#dsb-settings .dsb-meta-box p.dsb-description {
+    margin-top: 8px;
+}
+
+.dsb-meta-box p:last-child {
+	margin-bottom: 0;
+}
+
+.dsb-meta-box .error {
+	color: #ff0000;
+	font-weight: bold;
+}
+
+.dsb-meta-box .success {
+	color: #4bb543;
+	font-weight: bold;
+}
+
+label.dsb-label {
+	display: block;
+	margin-bottom: 1em;
+	font-weight: bold;
+}
+
+.dsb-field-container-checkbox .dsb-label {
+	display: inline-block;
+    margin-right: 8px;
+}
+
+.dsb-field-container .dsb-field-container-text,
+.dsb-field-container .dsb-field-container-textarea {
+	width: 100%;
+}
+
+.dsb-field-container-textarea {
+	min-height: 100px;
+}
+
+/******************************************************************
+ 								TABS
+******************************************************************/
+
+.dsb-meta-box .dsb-tabs {
+	/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+	position: relative;
+	width: 100%;
+}
+
+.dsb-meta-box .dsb-tabs:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 160px;
+	height: 100%;
+
+	background-color: #f6f7f7;
+	border-right: 1px solid	#dfdfdf;
+}
+
+.dsb-meta-box .dsb-tabs .ui-tabs-panel {
+	float: right;
+	width: calc(100% - 160px);
+
+	display: flex;
+	box-sizing: border-box;
+	background: #ffffff;
+}
+
+.dsb-meta-box .dsb-tabs .ui-tabs-panel p:first-child {
+	margin-top: 0;
+}
+
+.dsb-meta-box .dsb-tabs .ui-tabs-nav {
+	margin: 0;
+	float: left;
+	width: 160px;
+}
+
+.dsb-meta-box .dsb-tabs .ui-tabs-nav li {
+	list-style: none;
+	float: left;
+	position: relative;
+	top: 0;
+	margin: 0;
+	border-bottom-width: 0;
+	padding: 0;
+	white-space: nowrap;
+	clear: left;
+	width: 100%;
+}
+
+.dsb-meta-box .dsb-tabs .ui-tabs-nav .ui-tabs-anchor {
+	border-bottom: 1px solid #ededed;
+	border-right: 1px solid #dfdfdf;
+    font-size: 13px;
+    line-height: 18px;
+    color: #2271b1;
+    padding: 10px;
+    margin: 0 -1px 0 0;
+    font-weight: normal;
+    border-radius: 0;
+    background: transparent;
+	text-decoration: none;
+	display:block;
+}
+
+.dsb-meta-box .dsb-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+	background-color: #ffffff;
+	border-right-color: #ffffff
+}
+
+.dsb-meta-box .dsb-tabs .ui-tabs-nav li.ui-tabs-tab .ui-tabs-anchor:hover {
+	background-color: #ffffff;
+}
+
+.dsb-meta-box .dsb-tabs .ui-tabs-nav li.ui-tabs-tab .ui-tabs-anchor:focus {
+	box-shadow: none;
+	outline: none;
+	outline-offset: 0;
+}
+
+.dsb-meta-box .dsb-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
+.dsb-meta-box .dsb-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
+.dsb-meta-box .dsb-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
+	cursor: text;
+	color: #000000;
+}
+
+.dsb-meta-box .ui-helper-clearfix:before,
+.dsb-meta-box .ui-helper-clearfix:after {
+	content: "";
+	display: table;
+	border-collapse: collapse;
+}
+
+.dsb-meta-box .ui-helper-clearfix:after {
+	clear: both;
+}
+
+/******************************************************************
+ 						STYLED INPUT[type=radio]
+******************************************************************/
+
+.dsb-meta-box .dsb-styled-radios .dsb-content .dsb-radios {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.dsb-meta-box .dsb-styled-radios .dsb-content .dsb-radio {
+	min-width: 70px;
+}
+
+.dsb-meta-box .dsb-styled-radios label.dsb-radio {
+    text-align: center;
+    display: block;
+    box-sizing: border-box;
+
+	width: auto;
+	flex: 0 1 auto;
+}
+
+.dsb-meta-box .dsb-styled-radios [type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.dsb-meta-box .dsb-styled-radios span {
+	width: 100%;
+}
+
+.dsb-meta-box .dsb-styled-radios .dsb-radio:first-child span {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.dsb-meta-box .dsb-styled-radios .dsb-radio:last-child span {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border-left: 0;
+}
+
+.dsb-meta-box .dsb-styled-radios .dsb-radio:not(:first-child):not(:last-child) span {
+	border-radius: 0;
+	border-left: 0;
+}
+
+.dsb-meta-box .dsb-styled-radios [type=radio]:checked + span {
+	background: #2271b1;
+    border-color: #2271b1;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: none;
+}
+
+/******************************************************************
+ 								GRID
+******************************************************************/
+.dsb-row {
+	display: flex;
+    flex-flow: row wrap;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.dsb-col {
+	width: auto;
+	flex: 0 1 auto;
+}
+
+.dsb-small-12 {
+	flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media print, screen and (min-width: 640px) {
+	.dsb-medium-6 {
+		flex: 0 0 calc(100% / 12 * 6);
+		max-width: calc(100% / 12 * 6);
+	}
+
+    .dsb-medium-4 {
+		flex: 0 0 calc(100% / 12 * 4);
+		max-width: calc(100% / 12 * 4);
+	}
+
+	.dsb-medium-3 {
+		flex: 0 0 calc(100% / 12 * 3);
+		max-width: calc(100% / 12 * 3);
+	}
+
+	.dsb-medium-auto {
+		flex: none;
+		max-width: initial;
+	}
+}
+
+#dsb-documentation .dsb-content h2 {
+    font-size: 18px;
+    padding: 0;
+    margin: 0 0 1rem 0;
+}

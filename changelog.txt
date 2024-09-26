@@ -1,0 +1,69 @@
+
+=== Changelog ===
+
+= 2.6.0
+* Added Spintax functionality
+* Added Spintax video manual
+* Fixed archive page with Elementor
+* Improved archive page excerpts. You can now filter the excerpt length
+* Updated translations
+
+= 2.5.0 =
+* New field for Overview label
+* Case sensitive placeholders
+* Updated Video tutorial
+* Fixed WooCommerce High-Performance order storage (HPOS) Compatibility
+
+= 2.4.0 =
+* Fixed non-Latin characters now working in SEO Page base, Search terms and Locations
+* Fixed default template selection for Block Themes
+
+= 2.3.0 =
+* New setting: Enable canonical tag
+* Added SEO Title field
+* Added Meta description field
+* Added link to online documentation
+
+= 2.2.0 =
+* Added Rank Math support
+* Fixed Last modified date in XML sitemap for demo hairdressers page
+
+= 2.1.0 =
+* Added Elementor support
+
+= 2.0.1 =
+* Removed example images
+
+= 2.0.0 =
+* Added new Documentation page with YouTube plugin explanation video
+* Updated plugin for Envato / CodeCanyon
+
+= 1.2.0 =
+* Fixed urls when Wordpress CMS was installed in different folder
+
+= 1.1.1 =
+* Fixed PHP notices in Sitemap
+
+= 1.1.0 =
+* Added Adjacent SEO Pages links to bottom of content
+* Added new setting to enable / disable Adjacent SEO Pages links
+* Added Archives with paginated SEO Pages
+* Added new archive page in Yoast Breadcrumbs
+* New template dsb-archive.php for archive pages can be copied to theme to be modified by theme authors
+* Archives can be added to Wordpress menus
+* Archive pages are added to Yoast sitemap automatically
+* Fix translated labels in admin
+* Add Featured image to Full Width and No Sidebar templates
+
+= 1.0.1 =
+* Disabled Yoast Open Graph tags for published and modified time
+* Updated Featured Image Alt tag with SEO Page title
+* Added trailing slash to sitemap urls
+* Updated last modified time in sitemap
+* Add Setting fields and functionality for plural placeholders
+* Updated translations and field explanations
+* Tested up to Wordpress 5.7.2
+
+
+= 1.0.0 =
+Initial release.

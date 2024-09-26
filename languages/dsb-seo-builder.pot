@@ -1,0 +1,409 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: SEO Builder\n"
+"POT-Creation-Date: 2024-06-05 11:55+0200\n"
+"PO-Revision-Date: 2023-08-29 12:07+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Builder: Poedit 3.4.2\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: nowweb-seo-builder.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#: includes/admin.php:22 includes/admin.php:59 includes/class.dsb-config.php:59
+#: includes/class.dsb-config.php:62
+msgid "SEO Page base"
+msgstr ""
+
+#: includes/admin.php:30 includes/admin.php:60 includes/class.dsb-config.php:95
+msgid "Archive page title"
+msgstr ""
+
+#: includes/admin.php:38 includes/admin.php:61
+msgid "1st Search Term"
+msgstr ""
+
+#: includes/admin.php:46 includes/admin.php:62
+msgid "1st Location"
+msgstr ""
+
+#: includes/admin.php:54 includes/admin.php:63
+msgid "Generated URLs"
+msgstr ""
+
+#: includes/admin.php:91 includes/class.dsb-config.php:92
+#: includes/class.dsb-config.php:97 includes/content-filters.php:220
+#: includes/content-filters.php:239 includes/content-filters.php:368
+#: includes/yoast-filters.php:46 includes/yoast-filters.php:59
+#: templates/dsb-archive.php:66
+msgid "Archive"
+msgstr ""
+
+#: includes/admin.php:106
+msgid "No Searchterms"
+msgstr ""
+
+#: includes/admin.php:122
+msgid "No Locations"
+msgstr ""
+
+#: includes/admin.php:159
+msgid "Full width"
+msgstr ""
+
+#: includes/admin.php:160
+msgid "No sidebar"
+msgstr ""
+
+#: includes/admin.php:226 includes/class.dsb-config.php:136
+msgid "Search terms"
+msgstr ""
+
+#: includes/admin.php:227 includes/class.dsb-config.php:154
+msgid "Locations"
+msgstr ""
+
+#: includes/admin.php:228
+msgid "Lines: "
+msgstr ""
+
+#: includes/admin.php:229
+msgid "max: "
+msgstr ""
+
+#: includes/class.dsb-config.php:41
+msgid "SEO Page settings"
+msgstr ""
+
+#: includes/class.dsb-config.php:64
+msgid ""
+"The SEO Page base will be used in all generated SEO Page URLs. This would "
+"make your URLs look like the URL Structure below."
+msgstr ""
+
+#: includes/class.dsb-config.php:76
+msgid "Slug"
+msgstr ""
+
+#: includes/class.dsb-config.php:80
+#, php-format
+msgid ""
+"Enter the slug with %s and %s to generate unique URLs for each combination "
+"of a search term and a location."
+msgstr ""
+
+#: includes/class.dsb-config.php:98
+msgid "Enter the page title to show on the archive page."
+msgstr ""
+
+#: includes/class.dsb-config.php:107 includes/content-filters.php:320
+msgid "Overview"
+msgstr ""
+
+#: includes/class.dsb-config.php:110
+msgid "Overview label"
+msgstr ""
+
+#: includes/class.dsb-config.php:113
+msgid "Enter the label to use for the link to archive page."
+msgstr ""
+
+#: includes/class.dsb-config.php:123
+msgid "URL Structure"
+msgstr ""
+
+#: includes/class.dsb-config.php:132
+msgid ""
+"One search term per line. Separate single and plural values with the pipe | "
+"character"
+msgstr ""
+
+#: includes/class.dsb-config.php:139
+#, php-format
+msgid ""
+"Enter a list of unique search terms. For every SEO Page each %s and %s "
+"placeholder will be replaced by a search term from this list. Separate two "
+"search terms on a single line by the pipe | character for single and plural "
+"values"
+msgstr ""
+
+#: includes/class.dsb-config.php:150
+msgid ""
+"One location per line.  Separate single and plural values with the pipe | "
+"character"
+msgstr ""
+
+#: includes/class.dsb-config.php:157
+#, php-format
+msgid ""
+"Enter a list of unique locations. For every SEO Page each %s placeholder "
+"will be replaced by a location from this list."
+msgstr ""
+
+#: includes/class.dsb-config.php:169
+msgid "Overview generated URLs"
+msgstr ""
+
+#: includes/class.dsb-config.php:179 includes/class.dsb-config.php:182
+msgid "SEO title"
+msgstr ""
+
+#: includes/class.dsb-config.php:185
+msgid ""
+"Enter the title tag for the head. Leave empty to use the default Wordpress "
+"title-tag or of your SEO plugin, if it supports SEO Builder."
+msgstr ""
+
+#: includes/class.dsb-config.php:193 includes/class.dsb-config.php:197
+msgid "Meta description"
+msgstr ""
+
+#: includes/class.dsb-config.php:200
+#, php-format
+msgid ""
+"Enter the meta description with %s and %s to generate a unique meta "
+"description for each page. Leave empty to use the Meta description of your "
+"SEO plugin, if it supports SEO Builder."
+msgstr ""
+
+#: includes/class.dsb-documentation.php:43
+msgid "SEO Builder documentation"
+msgstr ""
+
+#: includes/class.dsb-documentation.php:70
+#: includes/class.dsb-documentation.php:71
+#: includes/class.dsb-documentation.php:96
+#: includes/class.dsb-documentation.php:181
+msgid "Documentation"
+msgstr ""
+
+#: includes/class.dsb-documentation.php:128
+msgid "SEO Builder Documentation"
+msgstr ""
+
+#: includes/class.dsb-documentation.php:172 includes/class.dsb-settings.php:402
+msgid "Save options"
+msgstr ""
+
+#: includes/class.dsb-settings.php:43 includes/class.dsb-settings.php:411
+msgid "SEO Builder settings"
+msgstr ""
+
+#: includes/class.dsb-settings.php:70 includes/class.dsb-settings.php:71
+#: includes/class.dsb-settings.php:324 includes/functions.php:541
+msgid "Settings"
+msgstr ""
+
+#: includes/class.dsb-settings.php:89
+msgid "Search term placeholder"
+msgstr ""
+
+#: includes/class.dsb-settings.php:104
+msgid "Search terms (plural) placeholder"
+msgstr ""
+
+#: includes/class.dsb-settings.php:118 includes/class.dsb-settings.php:172
+msgid "Enable case sensitive placeholders"
+msgstr ""
+
+#: includes/class.dsb-settings.php:121 includes/class.dsb-settings.php:175
+#: includes/class.dsb-settings.php:211 includes/class.dsb-settings.php:228
+#: includes/class.dsb-settings.php:245 includes/class.dsb-settings.php:262
+msgid "No"
+msgstr ""
+
+#: includes/class.dsb-settings.php:122 includes/class.dsb-settings.php:176
+#: includes/class.dsb-settings.php:212 includes/class.dsb-settings.php:229
+#: includes/class.dsb-settings.php:246 includes/class.dsb-settings.php:263
+msgid "Yes"
+msgstr ""
+
+#: includes/class.dsb-settings.php:127 includes/class.dsb-settings.php:181
+#, php-format
+msgid ""
+"If enabled you can use %s and %s for the single placeholder.<br>If enabled "
+"you can use %s and %s for the plural placeholder."
+msgstr ""
+
+#: includes/class.dsb-settings.php:143
+msgid "Location placeholder"
+msgstr ""
+
+#: includes/class.dsb-settings.php:158
+msgid "Locations (plural) placeholder"
+msgstr ""
+
+#: includes/class.dsb-settings.php:196
+msgid "Placeholders"
+msgstr ""
+
+#: includes/class.dsb-settings.php:208
+msgid "Enable adjacent SEO pages links"
+msgstr ""
+
+#: includes/class.dsb-settings.php:225
+msgid "Include styling"
+msgstr ""
+
+#: includes/class.dsb-settings.php:242
+msgid "Enable canonical tag"
+msgstr ""
+
+#: includes/class.dsb-settings.php:259
+msgid "Enable spintax"
+msgstr ""
+
+#: includes/class.dsb-settings.php:276
+msgid "Spintax rotation"
+msgstr ""
+
+#: includes/class.dsb-settings.php:279
+msgid "Sequential"
+msgstr ""
+
+#: includes/class.dsb-settings.php:280
+msgid "Random"
+msgstr ""
+
+#: includes/class.dsb-settings.php:284
+msgid ""
+"<strong>Random: </strong> Generate a random combination of the text each "
+"time. Adds variability and freshness to the content, as the combination will "
+"be different on each page load.<br><strong>Sequential:</strong> Generate a "
+"specific combination based on which SEO Page is shown. Ensures consistency "
+"where each page has a unique and fixed version of the text."
+msgstr ""
+
+#: includes/class.dsb-settings.php:295 includes/class.dsb-settings.php:326
+msgid "Sitemap"
+msgstr ""
+
+#: includes/class.dsb-settings.php:325
+msgid "Spintax"
+msgstr ""
+
+#: includes/class.dsb-settings.php:358
+msgid "SEO Builder Settings"
+msgstr ""
+
+#: includes/content-filters.php:258
+#, php-format
+msgid "Archive for %s and more in %s and other locations - %s"
+msgstr ""
+
+#: includes/custom-post-type.php:8
+msgctxt "Post type general name"
+msgid "SEO Builder"
+msgstr ""
+
+#: includes/custom-post-type.php:9
+msgctxt "Post type singular name"
+msgid "SEO Page"
+msgstr ""
+
+#: includes/custom-post-type.php:10
+msgctxt "Admin Menu text"
+msgid "SEO Builder"
+msgstr ""
+
+#: includes/custom-post-type.php:11
+msgctxt "Add New on Toolbar"
+msgid "SEO Builder"
+msgstr ""
+
+#: includes/custom-post-type.php:12
+msgid "SEO Pages"
+msgstr ""
+
+#: includes/custom-post-type.php:13
+msgid "All SEO Pages"
+msgstr ""
+
+#: includes/custom-post-type.php:14 includes/custom-post-type.php:15
+msgid "Add new SEO Page"
+msgstr ""
+
+#: includes/custom-post-type.php:16
+msgid "New SEO Page"
+msgstr ""
+
+#: includes/custom-post-type.php:17
+msgid "Edit SEO Page"
+msgstr ""
+
+#: includes/custom-post-type.php:18
+msgid "Update SEO Page"
+msgstr ""
+
+#: includes/custom-post-type.php:19
+msgid "View SEO Page"
+msgstr ""
+
+#: includes/custom-post-type.php:20
+msgid "View SEO Pages"
+msgstr ""
+
+#: includes/custom-post-type.php:21
+msgid "Search SEO Pages"
+msgstr ""
+
+#: includes/custom-post-type.php:24
+msgid "SEO Page"
+msgstr ""
+
+#: includes/field-filters.php:33
+msgid "The first 20 URLs are listed below."
+msgstr ""
+
+#: includes/field-filters.php:39
+#, php-format
+msgid "A unique URL is generated for each combination of %s and %s."
+msgstr ""
+
+#: includes/field-filters.php:44
+#, php-format
+msgid "%s URLs generated."
+msgstr ""
+
+#: includes/field-filters.php:82
+msgid "Add Search terms and Locations."
+msgstr ""
+
+#: includes/field-filters.php:91
+msgid "Add this sitemap to the Google Search Console Sitemaps:"
+msgstr ""
+
+#: includes/field-filters.php:130
+msgid ""
+"When you change these placeholders, do not forget to update the placeholders "
+"on your SEO Pages"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "SEO Builder"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://seobuilder.io/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Generate SEO landingpages based on different search terms and locations."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "seobuilder.io"
+msgstr ""

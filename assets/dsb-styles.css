@@ -1,0 +1,95 @@
+
+#dsb-page-wrapper {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#dsb-page-wrapper * {
+    box-sizing: border-box;
+}
+
+/******************************************************************
+ 								GRID
+******************************************************************/
+.dsb-row {
+    max-width: 75rem;
+	display: flex;
+    flex-flow: row wrap;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.dsb-col {
+	width: auto;
+	flex: 0 1 auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.dsb-small-12 {
+	flex: 0 0 100%;
+    max-width: 100%;
+}
+
+@media print, screen and (min-width: 640px) {
+	.dsb-medium-9 {
+		flex: 0 0 calc(100% / 12 * 9);
+		max-width: calc(100% / 12 * 9);
+	}
+}
+
+/******************************************************************
+ 						        ARCHIVE
+******************************************************************/
+
+.dsb-seo-page {
+    margin: 8px 0;
+}
+
+/******************************************************************
+ 						    ADJECENT LINKS
+******************************************************************/
+
+.dsb-adjacent-links {
+    text-align: center;
+    margin: 8px 0;
+}
+
+.dsb-adjacent-links a {
+    margin: 0 8px;
+}
+
+/******************************************************************
+ 							PAGINATION
+******************************************************************/
+
+.dsb-pagination {
+    text-align: center;
+}
+
+.dsb-pagination ul {
+    margin: 1rem 0;
+}
+
+.dsb-pagination ul li {
+    display: inline-block;
+    margin: 0 4px;
+}
+
+.dsb-pagination ul li span.current,
+.dsb-pagination ul li a {
+    display: block;
+    min-width: 30px;
+    line-height: 30px;
+    border: 1px solid;
+    text-align: center;
+    text-decoration: none;
+    padding: 0 8px;
+}
