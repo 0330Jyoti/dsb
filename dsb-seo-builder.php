@@ -3,7 +3,7 @@
 /**
  * Plugin Name:             DynamicSEO Builder
  * Plugin URI:              https://seobuilder.io/
- * Description:             Builders SEO landingpages based on different search terms and locations.
+ * Description:             Builder SEO landingpages based on different search terms and locations.
  * Version:                 2.6.0
  * Author:                  seobuilder.io
  * Author URI:              https://seobuilder.io/
