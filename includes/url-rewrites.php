@@ -247,7 +247,7 @@ function dsb_template_include($template)
  * 
  * @return string The path of the template to include.
  */
-function dsb_template_include_archive($template)
+function dsb_template_include_archive($templates)
 {
     // Gradually increase checks. Easiest most lightweight first:
     if (is_singular())
@@ -280,7 +280,7 @@ function dsb_template_include_archive($template)
     }
     
     // Allow to override template
-    $template = apply_filters('dsb_template_include_archive', $template);
+    $template = apply_filters('dsb_template_include_archive', $templates);
     
     return $template;
 }
@@ -304,7 +304,7 @@ add_filter('template_include', 'dsb_template_include_archive', $dsb_template_inc
  * 
  * @see https://wordpress.stackexchange.com/questions/281140/help-to-remove-last-trailing-slash-using-add-rewrite-rule
  */
-function redirect_canonical_callback($redirect)
+function redirect_canonical_callbackss($redirect)
 {
     $dsb_sitemap_query_var = get_query_var('dsb_sitemap', false);
     if ($dsb_sitemap_query_var === 'dsb_show_sitemap_index' || $dsb_sitemap_query_var === 'dsb_show_sitemap')
@@ -314,7 +314,7 @@ function redirect_canonical_callback($redirect)
 
     return $redirect;
 }
-add_filter('redirect_canonical', 'redirect_canonical_callback', 100, 1);
+add_filter('redirect_canonical', 'redirect_canonical_callbackss', 100, 1);
 
 /**
  * Filters the permalink for a post of a custom post type.
@@ -349,7 +349,7 @@ function dsb_remove_slug($post_link, $post, $leavename)
 add_filter('post_type_link', 'dsb_remove_slug', 10, 3);
 
 // Change links added by the Wordpress menu
-function filter_wp_nav_menu_objects( $sorted_menu_items, $args)
+function filter_wp_nav_menu_objectss( $sorted_menu_items, $args)
 { 
     foreach ($sorted_menu_items as $item)
     {
@@ -361,7 +361,7 @@ function filter_wp_nav_menu_objects( $sorted_menu_items, $args)
 
     return $sorted_menu_items; 
 }; 
-add_filter( 'wp_nav_menu_objects', 'filter_wp_nav_menu_objects', 10, 2 ); 
+add_filter( 'wp_nav_menu_objects', 'filter_wp_nav_menu_objectss', 10, 2 ); 
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 //                               SITEMAP URL REWRITES / REDIRECTS / ETC
