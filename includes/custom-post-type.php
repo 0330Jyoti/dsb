@@ -1,9 +1,7 @@
 <?php
 
-// Register Custom Post Type: dsb_seo_page
 add_action( 'init', 'dsb_register_cpt_dsb_seo_page', -99999 );
-function dsb_register_cpt_dsb_seo_page()
-{
+function dsb_register_cpt_dsb_seo_page(){
 	$labels = array(
 		"name"                  => _x("SEO Builder", 'Post type general name', 'dsb_seo_builder'),
 		"singular_name"         => _x("SEO Page", 'Post type singular name', 'dsb_seo_builder'),
@@ -38,10 +36,8 @@ function dsb_register_cpt_dsb_seo_page()
 		'exclude_from_search'   => true,
 		'publicly_queryable'    => true,
 		'capability_type'       => 'post',
-		'show_in_rest'          => false,	// No Gutenberg support just yet as there is no room for our custom meta boxes
+		'show_in_rest'          => false,	
 		'rewrite'               => array(
-			// remove extra words added in the Permalinks > Custom Structure. Example /posts_front_slug/%postname%/ would become /posts_front_slug/webdesign/ for a CPT dsb_seo_page post Webdesign
-			// we want to remove the WP_Rewrite::$front 'posts_front_slug' from the url by setting 'with_front' to false:
             'with_front'    => false	
         )
 	);

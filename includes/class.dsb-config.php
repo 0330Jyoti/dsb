@@ -1,41 +1,11 @@
 <?php
 
-/**
- * Adds a fake metabox on CPT dsb_seo_page edit pages
- * 
- * Adds fields to define URL structure of dynamically generated SEO Pages
- * 
- * Only loadded on Post Edit screen of CPT = dsb_seo_page
- */
-class DSB_Config
-{
-	/**
-	 * Holds DSB_Meta_Field fields to show and save each field
-	 * 
-	 * @var DSB_Meta_Block
-	 */
+class DSB_Config {
 	private $block;
-
-	/**
-	 * Fake meta box configuration
-	 * 
-	 * @var array
-	 */
 	private $meta_box_config;
-
-	/**
-	 * Nonce value that was used for verification, usually via a form field.
-	 * 
-	 * @var string
-	 */
 	private $nonce_name;
+	public function __construct(){
 
-	/**
-	 * 
-	 */
-	public function __construct()
-	{
-		// Fake meta box configuration
 		$this->meta_box_config = array(
 			'id'		=> 'dsb-seo-page-config',
 			'title'		=> __('SEO Page settings', 'dsb_seo_builder'),
@@ -49,8 +19,6 @@ class DSB_Config
 		// $location_plural_placeholder 	= $dsb->get_location_plural_placeholder();
 
 		$this->nonce_name 				= $this->meta_box_config['id'] . '_nonce';
-
-		// Create DSB_Meta_field fields
 		$seo_page_base_field = new DSB_Meta_Input_Field(
 			array(
                 'attr'          => array(
@@ -204,7 +172,6 @@ class DSB_Config
 			)
 		);
 
-		// Create DSB_Meta_Block and add fields
 		$block = new DSB_Meta_Block();
 		$block->add_field($seo_page_base_field);
 		$block->add_field($slug_placeholder_field);
@@ -218,41 +185,24 @@ class DSB_Config
         $block->add_field($title_tag_field);
 		$block->add_field($meta_description_field);
 
-		// Store the DSB_Meta_Block
 		$this->set_block($block);
 
 		// Actions
         add_action('edit_form_after_title', array($this, 'edit_form_after_title'));
 		add_action('save_post', array($this, 'save'), 10, 3);
-		add_filter('get_sample_permalink_html', '__return_empty_string');	// Hides the Permalink just below the Post title field
-
-		// Remove the permalink from the Screen Options as it is replaced by dsb-seo-page-base field
+		add_filter('get_sample_permalink_html', '__return_empty_string');	
 		remove_meta_box('slugdiv', 'dsb_seo_page', 'normal');
 	}
-    
-	/**
-	 * Show fake meta box above the_content() editor and make sure it's not sortable, foldable, etc
-	 */
-    public function edit_form_after_title()
-    {
+
+    public function edit_form_after_title(){
         $this->show();
     }
 
-	/**
-	 * Save fields in fake meta box
-	 * 
-	 * Fires once a post has been saved.
-	 *
-	 * @param int     $post_id Post ID.
-	 * @param WP_Post $post    Post object.
-	 * @param bool    $update  Whether this is an existing post being updated.
-	 */
-	public function save($post_id, $post, $update)
-	{
+	public function save($post_id, $post, $update){
 		if(
-			(defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) ||	// prevent the data from being auto-saved
-			(!current_user_can('edit_post', $post_id)) || 		// check user permissions
-			((!isset($_POST[$this->nonce_name]))) || 			// verify nonce (same with below)
+			(defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) ||	
+			(!current_user_can('edit_post', $post_id)) || 		
+			((!isset($_POST[$this->nonce_name]))) || 			
 			(!wp_verify_nonce($_POST[$this->nonce_name], basename(__FILE__)))
 		)
 		{
@@ -263,27 +213,15 @@ class DSB_Config
 
 		$dsb = DSB_Seo_Builder::get_instance();
 		$dsb->dsb_store_search_word_and_location_for_slugs($post_id);
-
-		// Workaround to flush the rewrite rules:
 		update_option( 'dsb-flush-rewrite-rules', 1 );
 	}
 
-	/**
-	 * Sets DSB_Meta_Block
-	 * 
-	 * @param DSB_Meta_Block $block	DSB_Meta_Block object
-	 */
-	public function set_block($block)
-	{
+	public function set_block($block){
 		$this->block = $block;
 	}
 
-	/**
-	 * Shows fake meta box with custom DSB_Meta_Field fields
-	 */
-	public function show()
-	{
-		// By faking the metabox design with class=postbox, we avoid all problems related to the metabox being sortable, foldable, etc
+	public function show(){
+		
 		printf ("\r\n<div id='%s' class='postbox'>\r\n",
 				$this->meta_box_config['id']
 			);

@@ -1,10 +1,4 @@
 <?php
-/**
- * The template for displaying an archive of SEO Builder pages for this SEO Page
- *
- * This template can be overridden by copying it to yourtheme/template-page-full-width.php
- */
-
 get_header();
 ?>
 

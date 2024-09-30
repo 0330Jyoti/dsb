@@ -3,8 +3,7 @@
 /**
  * Builds the root sitemap (example.com/seo_builder_sitemap_index.xml) which lists sub-sitemaps
  */
-function dsb_build_root_map()
-{
+function dsb_build_root_map(){
     $dsb        		= DSB_Seo_Builder::get_instance();
     $entries_per_page 	= $dsb->dsb_get_entries_per_sitemap_page();
     $links            	= [];
@@ -41,8 +40,7 @@ function dsb_build_root_map()
  *
  * @return string
  */
-function dsb_get_sitemap_index($links)
-{
+function dsb_get_sitemap_index($links){
 	$xml = '<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
 
 	foreach ($links as $link)
@@ -62,8 +60,7 @@ function dsb_get_sitemap_index($links)
  *
  * @return string
  */
-function dsb_sitemap_index_url($url)
-{
+function dsb_sitemap_index_url($url){
 	$date 		= $url['lastmod'];
 	$charset 	= 'UTF-8';
 	$url['loc'] = htmlspecialchars($url['loc'], ENT_COMPAT, $charset, false);
@@ -81,8 +78,7 @@ function dsb_sitemap_index_url($url)
  *
  * @return void
  */
-function dsb_output_seo_pages_sitemap_xml()
-{
+function dsb_output_seo_pages_sitemap_xml(){
     $dsb        		= DSB_Seo_Builder::get_instance();
     
     // The Change Frequency for files, should probably not be 'never', unless you know for sure you'll never change them again.
@@ -132,8 +128,7 @@ function dsb_output_seo_pages_sitemap_xml()
  *
  * @return string|false
  */
-function dsb_get_last_modified_gmt()
-{
+function dsb_get_last_modified_gmt(){
     global $wpdb;
 
     $sql = "

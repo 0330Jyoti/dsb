@@ -1,10 +1,4 @@
 <?php
-/**
- * The template for displaying an archive of SEO Builder pages for this SEO Page
- *
- * This template can be overridden by copying it to yourtheme/dsb-archive.php
- */
-
 get_header();
 
 ?>
@@ -42,25 +36,17 @@ get_header();
                     {
                         the_post();
 
-                        // Post data
                         $post_id		= get_the_ID();
-                        $post_title		= $post->post_title;	// fetch unfiltered title
+                        $post_title		= $post->post_title;
                         $seo_page_base	= $post->post_name;
-
-                        // Lookup table
                         $lookup_table 	= dsb_get_search_terms_and_locations_lookup_table($post_id);
                         $keys			= array_keys($lookup_table);
-
-                        // Setup pagination
                         $current_page   = !empty(get_query_var('paged')) ? (int)get_query_var('paged') : 1;
                         $num_seo_pages  = count($lookup_table);
                         $num_per_page   = apply_filters('dsb_archive_num_per_page', 10);
                         $max_pages      = (int)ceil($num_seo_pages / $num_per_page);
-
-                        // The current 10
                         $offset         = $num_per_page * ($current_page - 1);
                         $dsb_seo_pages	= array_slice($lookup_table, $offset, $num_per_page);
-
                         $index			= $offset;
 			?>
 			<h1><?php echo dsb_get_field('dsb-archive-page-title', $post_id, __('Archive', 'dsb_seo_builder')); ?></h1>
@@ -77,23 +63,15 @@ get_header();
                             
                             $the_url		= esc_url( trailingslashit(home_url($seo_page_base . '/' . strtolower(sanitize_title($the_slug)))));
 
-                            // For the Excerpt we need to first do our own search and replace AND spintax rotation
-                            // This is needed because if text A and B for instance are really long in { A | B | C },
-                            // Than the entire spintax tag is cut on in the excerpt causing the spintax to fail. { A | B is not a valid and closed spintax
                             if (get_option('dsb-enable_spintax', false))
                             {
-                                // Get the post and content
                                 $post               = get_post($post_id);
                                 $post_content       = $post->post_content;
-
-                                // Replace search terms and locations. And do spintax rotation if enabled
                                 $post_excerpt       = dsb_get_seo_pages_replace_search_terms_and_locations($post_content, $post_id, $search_term, $location, $search_terms, $locations, $the_slug, $index);
 
-                                // Fake it:
                                 $post->post_excerpt = '';
                                 $post->post_content = $post_excerpt;
 
-                                // Now finally call the default wordpress excerpt to make sure filters like excerpt_length are also working
                                 $post_excerpt       = get_the_excerpt($post);
                             }
                             else
